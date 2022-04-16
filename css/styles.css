@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(62, 53, 63);
+    color: rgb(232, 226, 226);
+}
+
+.brand {
+    font-size: 1.5rem;
+    padding:10px;
+    margin-left: 3rem;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style-type: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 1rem;
+}
+
+.navbar-links li a:hover {
+    background-color: grey;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+@media (max-width:400px) {
+    .toggle-button {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width:100%;
+        background-color: rgb(101, 72, 78);
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+  
+    }
+    .navbar-links li {
+        text-align: center;
+    }
+    .navbar-links li a {
+        padding: 0.7rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
